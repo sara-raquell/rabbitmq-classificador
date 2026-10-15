@@ -1,0 +1,35 @@
+# rotulo;texto
+Problema de acesso;não consigo fazer login na minha conta
+Problema de acesso;esqueci minha senha e o e-mail de recuperação não chega
+Problema de acesso;acesso negado ao painel administrativo
+Problema de acesso;minha conta foi bloqueada após várias tentativas de login
+Problema de acesso;o código de autenticação em dois fatores não funciona
+Problema de acesso;usuário sem permissão para acessar a área financeira
+Problema de acesso;senha incorreta mesmo digitando a senha certa
+Problema de acesso;não consigo entrar no sistema, aparece credenciais inválidas
+Problema de acesso;meu perfil perdeu as permissões de acesso
+Problema de acesso;link de redefinição de senha expirado
+Problema de acesso;cadastro não permite acesso, conta suspensa
+Problema de desempenho;o sistema está muito lento para carregar os relatórios
+Problema de desempenho;aplicativo travando e consumindo muita memória
+Problema de desempenho;as páginas demoram muito para abrir
+Problema de desempenho;a tela congela quando exporto os dados
+Problema de desempenho;alto uso de cpu deixa o computador lento
+Problema de desempenho;consulta demora minutos para retornar resultado
+Problema de desempenho;o sistema fica lento nos horários de pico
+Problema de desempenho;travamentos frequentes ao processar planilhas grandes
+Problema de desempenho;o app demora para responder e fica engasgando
+Problema de desempenho;lentidão ao salvar arquivos, o carregamento nunca termina
+Problema de desempenho;rendimento baixo, o programa fica pesado e lento
+Problema de conexão;erro de conexão com o servidor
+Problema de conexão;timeout ao tentar sincronizar os dados
+Problema de conexão;sem conexão com a internet dentro do aplicativo
+Problema de conexão;falha ao conectar com a vpn da empresa
+Problema de conexão;a conexão cai toda hora durante o uso
+Problema de conexão;não consigo conectar ao banco de dados remoto
+Problema de conexão;wifi instável e o app perde a conexão
+Problema de conexão;erro de rede, servidor não responde
+Problema de conexão;conexão recusada ao chamar o endpoint da api
+Problema de conexão;queda de conexão ao sincronizar com a nuvem
+Problema de conexão;dns não resolve e o host não é encontrado
+Problema de conexão;conexão interrompida durante o envio, rede caiu

@@ -1,0 +1,56 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3.13-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"   # interface de administração (guest / guest)
+    networks: [app-net]
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 5s
+      timeout: 10s
+      retries: 20
+
+  generator:
+    build: ./generator
+    container_name: generator
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      RABBITMQ_HOST: rabbitmq
+      MESSAGES_PER_SECOND: "10"   # mínimo exigido: 5
+      ERROR_EVERY: "100"          # a cada 100 mensagens publica uma inválida (vai para a DLQ); 0 desativa
+    networks: [app-net]
+    restart: on-failure
+
+  consumer-sentiment:
+    build: ./consumer-sentiment
+    container_name: consumer-sentiment
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      RABBITMQ_HOST: rabbitmq
+      PROCESSING_DELAY_MS: "1000"  # ~1 msg/s, mais lento que a chegada (~5 msg/s)
+      PREFETCH: "1"
+    networks: [app-net]
+    restart: on-failure
+
+  consumer-support:
+    build: ./consumer-support
+    container_name: consumer-support
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      RABBITMQ_HOST: rabbitmq
+      PROCESSING_DELAY_MS: "1000"
+      PREFETCH: "1"
+    networks: [app-net]
+    restart: on-failure
+
+networks:
+  app-net:
+    driver: bridge
