@@ -81,7 +81,3 @@ Cada consumidor possui seu próprio modelo, treinado na inicialização a partir
 | Filas crescendo | Bindings do exchange | Mensagem na DLQ |
 |---|---|---|
 | ![Filas](docs/evidencias/filas-crescendo.png) | ![Exchange](docs/evidencias/exchange-bindings.png) | ![DLQ](docs/evidencias/dlq.png) |
-
-## Autora
-
-Sara — Ciência da Computação, UFPI.
